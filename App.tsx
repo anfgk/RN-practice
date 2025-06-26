@@ -1,49 +1,72 @@
-import { ActivityIndicator, Button, Image, Text, TouchableOpacity, View } from "react-native"
+import { Text } from "react-native"
 import styled from "styled-components/native";
 
-const Card = styled.View`
-  background-color: #ddd;
-  padding: 5%;
-  margin: 5%;
-  border-radius: 10px;
+const WrapperView = styled.View`
+  width: 100%;
+  height: 100%;
+  background-color: #393939;
 `
 
-// 컴포넌트
-// View: 공간을 차지하는 컴포넌트
-// Text: 텍스트를 표시하는 컴포넌트
-// Image: 이미지를 표시하는 컴포넌트
-// TouchableOpacity: 터치 가능한 영역을 만드는 컴포넌트
-// ActivityIndicator: 로딩 중일 때 표시하는 컴포넌트
-// Button: 버튼을 표시하는 컴포넌트
+const ContainerView = styled.View`
+  padding-top: 25%;
+  padding-left: 20;
+`
 
+const SubText = styled.Text`
+  color: #fff;
+  font-size: 12;
+  margin-bottom: 13;
+  font-weight: bold;
+`
 
-// const App = () => {
-//   return (
-//     <View>
-//       <Text>Hello My name is Jeongha</Text>
-//       {/* <Image source={require("../firstpractice/cat.jpg")} style={{width: "50%", height: "50%"}} /> */}
-//       <Image source={{uri: "https://i.pinimg.com/736x/3f/25/91/3f259165de2f1d2b7002053c1b88fa11.jpg"}} 
-//       style={{width: "50%", height: "50%"}} />
-//       <Button title={"Button"}/>
-//       <TouchableOpacity onPress={() => console.log("abcde")}>
-//         <Text>This is TouchableOpacity</Text>
-//         </TouchableOpacity>
-//         <ActivityIndicator size={"large"} color={"#000000"} />
-//     </View>
-//   )
-// }
+const TitleText = styled.Text`
+  color: #fff;
+  font-size: 24;
+  font-weight: 500;
+  
+`
+
+const InputText = styled.Text`
+  color: #fff;
+  font-size: 16;
+  margin-bottom: 12;
+  font-weight: bold;
+`
+
+const Input = styled.TextInput`
+  background-color: #4B4B4B;
+  border-radius: 10px;
+  width: 360;
+  height: 56;
+  margin-bottom: 24;
+  padding-left: 12;
+  color: #fff;
+`
 
 const App = () => {
   return (
-    <View>
-      <Text>Hello My name is Jeongha</Text>
-      {/* <View style={{backgroundColor: "#ddd", padding: "5%", margin: "5%", borderRadius: 10}}> */}
-      <Card>
-        <Text style={{fontSize: 22}}>Title</Text>
-        <Text>This is a description.</Text>
-      </Card>
-      {/* </View> */}
-    </View>
+    <WrapperView>
+      <ContainerView>
+        <SubText>프로필 입력</SubText>
+        <TitleText>탑승권에 기입 될</TitleText>
+        <TitleText style={{marginBottom: 16}}>프로필 정보를 입력해주세요.</TitleText>
+        <InputText>이름</InputText>
+        <Input 
+          placeholder="이름을 입력해주세요." 
+          placeholderTextColor="#B0B0B0"
+        />
+        <InputText>전화번호</InputText>
+        <Input 
+          placeholder="전화번호를 입력해주세요." 
+          placeholderTextColor="#B0B0B0"
+        />
+        <InputText>생년월일</InputText>
+        <Input 
+          placeholder="생년월일을 입력해주세요." 
+          placeholderTextColor="#B0B0B0"
+        />
+      </ContainerView>
+    </WrapperView>
   )
 }
 

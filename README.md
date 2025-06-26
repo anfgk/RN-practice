@@ -19,3 +19,19 @@ React와 비슷한 방식으로 앱을 만들 수 있는 React Native가 적합�
 - React Native 기초부터 실전까지 학습 내용 기록
 - 컴포넌트, 스타일링, API, 배포 등 주요 기술 실습
 - 향후 프로젝트나 포트폴리오를 위한 기반 마련
+
+## px 단위 써도 되는 것 / 안 되는 것
+
+✅ React Native에서 써도 되는 것
+width, height	                   숫자(dp)                width: 100
+padding, margin, borderRadius 등    숫자(dp)	            padding: 20
+fontSize	                       숫자(dp)	               fontSize: 16
+color, backgroundColor	           문자열(hex, rgba 등)	    color: '#fff'
+fontWeight	                       문자열 또는 숫자	          'bold', '500'
+
+❌ React Native에서 쓰면 안 되는 것
+padding:  "20px"    "20px"은 문자열 → RN에서 무시됨 or 오류 발생
+font-size: 16px;	이건 웹 CSS 문법 → RN은 JS 기반 스타일이므로 오류
+:hover, :focus	    pseudo-selector는 RN에서 아예 지원 안 됨
+em, %, rem	        RN에서는 인식 불가. 숫자 단위만 지원됨
+calc(100% - 50px)	계산식 사용 불가. 직접 계산해서 숫자로 넣어야 함
