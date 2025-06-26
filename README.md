@@ -3,7 +3,7 @@
 ## 📱 React Native 연습 저장소입니다.
 
 이 저장소는 React Native를 공부하며 실습한 코드와 예제를 정리한 공간입니다.  
-React Native 학습 내용은 `practice` 폴더에 기록할 예정입니다.
+React Native 학습 내용은 `rn-practice` 폴더에 기록할 예정입니다.
 
 ## 👀 왜 이 강의를 듣게 되었나요?
 
