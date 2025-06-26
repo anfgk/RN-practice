@@ -30,7 +30,7 @@ const App = () => {
     <View>
       <Text>Hello My name is Jeongha</Text>
       <View style={{backgroundColor: "#ddd", padding: "5%", margin: "5%", borderRadius: 10}}>
-        <Text>Title</Text>
+        <Text style={{fontSize: 22}}>Title</Text>
         <Text>This is a description.</Text>
       </View>
     </View>
