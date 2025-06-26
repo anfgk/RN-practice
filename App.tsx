@@ -1,7 +1,15 @@
 import { ActivityIndicator, Button, Image, Text, TouchableOpacity, View } from "react-native"
+import styled from "styled-components/native";
+
+const Card = styled.View`
+  background-color: #ddd;
+  padding: 5%;
+  margin: 5%;
+  border-radius: 10px;
+`
 
 // 컴포넌트
-// Veiw: 공간을 차지하는 컴포넌트
+// View: 공간을 차지하는 컴포넌트
 // Text: 텍스트를 표시하는 컴포넌트
 // Image: 이미지를 표시하는 컴포넌트
 // TouchableOpacity: 터치 가능한 영역을 만드는 컴포넌트
@@ -29,10 +37,12 @@ const App = () => {
   return (
     <View>
       <Text>Hello My name is Jeongha</Text>
-      <View style={{backgroundColor: "#ddd", padding: "5%", margin: "5%", borderRadius: 10}}>
+      {/* <View style={{backgroundColor: "#ddd", padding: "5%", margin: "5%", borderRadius: 10}}> */}
+      <Card>
         <Text style={{fontSize: 22}}>Title</Text>
         <Text>This is a description.</Text>
-      </View>
+      </Card>
+      {/* </View> */}
     </View>
   )
 }
